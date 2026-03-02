@@ -3,28 +3,22 @@ import { GraduationCap } from "lucide-react";
 
 const educationData = [
   {
-    title: "Matriculation",
-    institution: "Kainat International School",
-    detail: "Board: CBSE",
-    year: "2019",
+    title: "Higher Secondary",
+    institution: "Spring Day Higher Secondary School",
+    detail: "Board: MP BOARD",
+    year: "2023",
   },
   {
-    title: "Intermediate",
-    institution: "Satendrya Narayan Sinha (SNS) College",
-    detail: "Stream: I.COM",
-    year: "2019–2021",
-  },
-  {
-    title: "Graduation",
-    institution: "Satendrya Narayan Sinha (SNS) College",
-    detail: "Degree: Bachelor of Computer Applications (BCA)",
-    year: "2021–2024",
+    title: "B.Tech CSE",
+    institution: "Shri Ram Institute of Technology, Jabalpur",
+    detail: "Degree: Bachelor of Technology in Computer Science and Engineering (B.Tech CSE)",
+    year: "2023–2027",
   },
   {
     title: "Internship",
-    institution: "Web Development Intern",
-    detail: "Role: Web Development Intern",
-    year: "2024",
+    institution: "Future Interns",
+    detail: "Role: Full Stack Web Development",
+    year: "2026",
   },
 ];
 
