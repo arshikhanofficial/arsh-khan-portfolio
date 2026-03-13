@@ -287,7 +287,7 @@ const CertificatesSection = () => {
             }}
             transition={{
               x: {
-                duration: 30,
+                duration: 50,
                 ease: "linear",
                 repeat: Infinity,
                 repeatType: "loop",
