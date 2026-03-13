@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Award, X } from "lucide-react";
 
+// Original certificates
 import certGoogleAmbassador from "@/assets/cert-google-ambassador.png";
 import certCodeSocial from "@/assets/cert-code-social.png";
 import certTataCrucible from "@/assets/cert-tata-crucible.png";
@@ -11,7 +12,18 @@ import certTechnoGenesis from "@/assets/cert-techno-genesis.png";
 import certSmartedDsa from "@/assets/cert-smarted-dsa.png";
 import certGoogleGemini from "@/assets/cert-google-gemini.png";
 
+// New certificates
+import certDevtownPythonML from "@/assets/cert-devtown-python-ml.png";
+import certGeeksVultr from "@/assets/cert-geeks-vultr.png";
+import certLetsUpgradeReact from "@/assets/cert-letsupgrade-react.png";
+import certLetsUpgradeHTMLCSS from "@/assets/cert-letsupgrade-html-css.png";
+import certDevtownReactChatgpt from "@/assets/cert-devtown-react-chatgpt.png";
+import certGoogleGemini2 from "@/assets/cert-google-gemini-2.png";
+import certLetsUpgradeVibeCoding from "@/assets/cert-letsupgrade-vibe-coding.png";
+import certGoogleResponsibleAI from "@/assets/cert-google-responsible-ai.png";
+
 const certificates = [
+  // Google Student Ambassador
   {
     title: "Google Student Ambassador Program",
     org: "Google Gemini / PING Network",
@@ -19,6 +31,79 @@ const certificates = [
     description: "Certificate of Participation for active participation in the Google Student Ambassador Program, demonstrating enthusiasm, collaboration, and a strong willingness to learn and contribute.",
     image: certGoogleAmbassador,
   },
+  // Google Gemini Program
+  {
+    title: "Google Gemini Program",
+    org: "Google Student Ambassador",
+    date: "Sep 6, 2025",
+    description: "Certificate of Participation in the Google Gemini Program at Shri Ram Institute of Science and Technology, Jabalpur, demonstrating enthusiasm, leadership, and commitment.",
+    image: certGoogleGemini,
+  },
+  // Google Gemini Program (Second Certificate)
+  {
+    title: "Google Gemini Program",
+    org: "Google Student Ambassador - SRIT Jabalpur",
+    date: "Sep 6, 2025",
+    description: "Certificate of Participation for the Google Gemini Program, recognizing valuable contributions in spreading knowledge and skills within the community.",
+    image: certGoogleGemini2,
+  },
+  // Google Responsible AI
+  {
+    title: "Introduction to Responsible AI",
+    org: "Google Cloud / Simplilearn",
+    date: "Sep 7, 2025",
+    description: "Successfully completed the online course on Introduction to Responsible AI, demonstrating initiative and commitment to deepening skills in AI ethics.",
+    image: certGoogleResponsibleAI,
+  },
+  // DevTown Python & ML
+  {
+    title: "Python & Machine Learning Bootcamp",
+    org: "DevTown / GDSC Giet University",
+    date: "2024",
+    description: "Certificate of Completion for successfully completing 7-days bootcamp on Python and Machine Learning with DevTown.",
+    image: certDevtownPythonML,
+  },
+  // DevTown React & ChatGPT
+  {
+    title: "React.js & JavaScript ChatGPT Clone",
+    org: "DevTown / GDSC / AWS Community",
+    date: "Oct 25, 2024",
+    description: "Certificate of Participation for successfully completing 7-days Free Bootcamp on React.js and JavaScript ChatGPT Clone development.",
+    image: certDevtownReactChatgpt,
+  },
+  // GeeksforGeeks Vultr Hackathon
+  {
+    title: "Vultr Cloud Innovate Hackathon",
+    org: "GeeksforGeeks / Campus Mantri",
+    date: "2024",
+    description: "Successfully participated in Vultr Cloud Innovate Hackathon through the Campus Ambassador Program by GeeksforGeeks.",
+    image: certGeeksVultr,
+  },
+  // Let's Upgrade React
+  {
+    title: "React Bootcamp",
+    org: "Let's Upgrade / NSDC / ITM Edutech / GDG MAD",
+    date: "Sep 4-6, 2025",
+    description: "Successfully completed the React Bootcamp (3 Days) in collaboration with National Skill Development Corporation and Google Developer Group.",
+    image: certLetsUpgradeReact,
+  },
+  // Let's Upgrade HTML & CSS
+  {
+    title: "HTML & CSS Bootcamp",
+    org: "Let's Upgrade / NSDC / ITM Edutech / GDG MAD",
+    date: "Sep 1-3, 2025",
+    description: "Successfully completed the HTML & CSS Bootcamp (3 Days) in collaboration with National Skill Development Corporation.",
+    image: certLetsUpgradeHTMLCSS,
+  },
+  // Let's Upgrade Vibe Coding
+  {
+    title: "Idea to Deployment using Vibe Coding",
+    org: "Let's Upgrade / NSDC / ITM Edutech / GDG MAD",
+    date: "Sep 15-17, 2025",
+    description: "Successfully completed the Vibe Coding Bootcamp (3 Days) covering the complete deployment workflow from idea to production.",
+    image: certLetsUpgradeVibeCoding,
+  },
+  // Code Social
   {
     title: "Winter of Code Social 2025",
     org: "Code Social",
@@ -26,6 +111,7 @@ const certificates = [
     description: "Successfully completed Winter of Code Social 2025 as a Contributor, an open source focused learning and contribution program organized by Code Social.",
     image: certCodeSocial,
   },
+  // Tata Crucible
   {
     title: "Tata Crucible Campus Quiz 2025",
     org: "Internshala / Tata Crucible",
@@ -33,6 +119,7 @@ const certificates = [
     description: "Certificate of Participation in Prelims Level 1 of the Tata Crucible Campus Quiz 2025, demonstrating enthusiasm, effort, and commitment.",
     image: certTataCrucible,
   },
+  // Cisco
   {
     title: "Greenhouse Gas Accounting for IT",
     org: "Cisco Networking Academy / OnePointFive",
@@ -40,13 +127,15 @@ const certificates = [
     description: "Statement of Achievement for completing the Introduction to Greenhouse Gas Accounting for IT course, provided by Cisco Networking Academy.",
     image: certCisco,
   },
+  // Oracle
   {
-    title: "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
+    title: "Oracle Cloud Infrastructure AI Foundations",
     org: "Oracle University",
     date: "Sep 23, 2025",
     description: "Oracle Certified Foundations Associate — recognized by Oracle Corporation as Oracle Certified in Cloud Infrastructure AI Foundations.",
     image: certOracle,
   },
+  // Techno Genesis
   {
     title: "Techno Genesis 2025 — Volunteer",
     org: "Shri Ram Group, Jabalpur",
@@ -54,19 +143,13 @@ const certificates = [
     description: "Certificate of Participation as a Volunteer at Techno Genesis 2025, SRIT Jabalpur. Recognized for hard work, dedication, and achievement.",
     image: certTechnoGenesis,
   },
+  // Smarted DSA
   {
     title: "Data Structures & Algorithms",
     org: "Smarted / Startup India",
     date: "Dec 2, 2025",
     description: "Certificate of Course Completion for successfully completing the Data Structures & Algorithms course, showcasing dedication and a passion for learning.",
     image: certSmartedDsa,
-  },
-  {
-    title: "Google Gemini Program",
-    org: "Google Student Ambassador",
-    date: "Sep 6, 2025",
-    description: "Certificate of Participation in the Google Gemini Program at Shri Ram Institute of Science and Technology, Jabalpur, demonstrating enthusiasm, leadership, and commitment.",
-    image: certGoogleGemini,
   },
 ];
 
