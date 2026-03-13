@@ -6,6 +6,7 @@ import AboutSection from "@/components/AboutSection";
 import SkillsSection from "@/components/SkillsSection";
 import EducationSection from "@/components/EducationSection";
 import ProjectsSection from "@/components/ProjectsSection";
+import CertificatesSection from "@/components/CertificatesSection";
 import ContactSection from "@/components/ContactSection";
 import Preloader from "@/components/Preloader";
 
