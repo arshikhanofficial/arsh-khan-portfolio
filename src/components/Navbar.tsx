@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Home, User, Zap, FolderOpen, Mail, GraduationCap } from "lucide-react";
+import { Home, User, Zap, FolderOpen, Mail, GraduationCap, Award } from "lucide-react";
 
 const navItems = [
   { id: "home", icon: Home, label: "Home" },
@@ -7,6 +7,7 @@ const navItems = [
   { id: "skills", icon: Zap, label: "Skills" },
   { id: "education", icon: GraduationCap, label: "Education" },
   { id: "projects", icon: FolderOpen, label: "Projects" },
+  { id: "certificates", icon: Award, label: "Certificates" },
   { id: "contact", icon: Mail, label: "Contact" },
 ];
 
